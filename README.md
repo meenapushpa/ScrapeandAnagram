@@ -1,4 +1,4 @@
-![Branch Strategy](https://img.shields.io/badge/Branch_Strategy-Linear_Branching-blue.svg)
+
 [![Python 3.6](https://img.shields.io/badge/python-3.6.8-blue.svg)](https://www.python.org/downloads/release/python-368/)
 
 # Web Scraper and Anagram
