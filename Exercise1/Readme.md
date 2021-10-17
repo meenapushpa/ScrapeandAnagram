@@ -39,4 +39,4 @@ This program is using default collections module, Hence no module is require to 
 
 *Sample output*
 
-![Test Image 1](output.JPG)
+![Test Image 1](/output.png)
