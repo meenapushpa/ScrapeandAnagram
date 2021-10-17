@@ -21,5 +21,4 @@ Factors to consider for demonstration:
 environments.
 
 **How to run:**
-
-scrapy crawl books -t csv -o outputfile.csv
+      scrapy crawl books -t csv -o outputfile.csv
