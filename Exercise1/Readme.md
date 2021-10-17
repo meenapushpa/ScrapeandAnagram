@@ -39,4 +39,16 @@ This program is using default collections module, Hence no module is require to 
 
 *Sample output*
 
-![Test Image 1](/output.png)
+```$ python Exercise1/anagram.py 
+Enter a word to find all anagrams: taste
+The anagram with the largest number of variants is 5 and results are {'taste', 'state', 'testa'}
+The longest pair of words that are anagrams of each other is 13 and results are {'tat', 'tea', 'ase', 'ast', 'ate', 'eat', 
+'tae', 'set', 'sea', 'sat', 'tst', 'aes', 'eta'}
+Are you sure want to continue y/n?: y
+Enter a word to find all anagrams: seat
+The anagram with the largest number of variants is 4 and results are {'sate', 'east', 'ates', 'eats', 'seat', 'seta'}      
+The longest pair of words that are anagrams of each other is 11 and results are {'tea', 'ase', 'ast', 'ate', 'eat', 'sea', 
+'set', 'tae', 'sat', 'aes', 'eta'}
+Are you sure want to continue y/n?: n
+Exiting from Anagram !!
+(venv) ```
