@@ -7,7 +7,7 @@ import logging
 import re
 from bookscrapper.items import BookscrapperItem
 
-#BooksSpider class is used to scrape the books in the url books.toscrape.com
+# BooksSpider class is used to scrape the books from the url books.toscrape.com
 class BooksSpider(scrapy.Spider):
     name = 'books'
     allowed_domains = ['books.toscrape.com']
@@ -17,7 +17,7 @@ class BooksSpider(scrapy.Spider):
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse_book)
             
-    #parse_url is used to parse the url and attach the given string       
+    # to parse the url and attach the given string       
     def parse_url(self, urlstr):
         url_check = re.search(r'(?<=catalogue/).*', urlstr)
         if url_check:
@@ -26,7 +26,7 @@ class BooksSpider(scrapy.Spider):
             attach_str = urlstr
         return attach_str
     
-    #parse_book is used to find the item detail page    
+    # to find the book items from all pages    
     def parse_book(self, response):
         sel = Selector(response)
         links = sel.xpath('//ol[@class="row"]/li').extract()
@@ -42,7 +42,7 @@ class BooksSpider(scrapy.Spider):
             url = urljoin('https://books.toscrape.com/catalogue/', suffix2_str)
             yield response.follow(url, callback=self.parse_book)
    
-    #parse_book_details is used to find the attributes of book in detail page
+    # to find the properties of each book in detail page
     def parse_book_details(self, response):
         item = BookscrapperItem()
         item['book_name'] = response.xpath('//div[@class="col-sm-6 product_main"]/h1/text()').get()
