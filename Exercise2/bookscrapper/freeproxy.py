@@ -1,3 +1,10 @@
+""" A freeproxy module
+
+This module is used to obtain available free proxy from the online or to use paid proxy. 
+This has been extensively written by Meena Priyadharshini for this Scrapy solution.
+
+"""
+
 import re
 import random
 import requests

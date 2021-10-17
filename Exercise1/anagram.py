@@ -3,15 +3,19 @@ import collections
 class Anagrams:
     def __init__(self):
         self.sorted_dict=collections.defaultdict(list)
+        # sorting the lines from the given source file in dict format
         with open("C:\Projects\Interview\SoftDevExercises\words.txt","r") as f:
             for line in f:
                 line=line.rstrip()
                 key=self.sort(line)
                 self.sorted_dict[key].append(line)
+                
+    # defining a static method using in built decorator in class
     @staticmethod
     def sort(word):
         return ''.join(sorted(word))
 
+    # search a item from the sorted dict
     def search(self,word):
         return self.sorted_dict[self.sort(word)]
 
@@ -27,6 +31,7 @@ class Anagrams:
             matches.append((length,matches_for_length,lengthcount))
         return matches
     
+# function to find the possibilities of given word to find the anagram
 def find_possibilities(input, length, val=''):
     if length == 0:
         return [val]
@@ -55,9 +60,9 @@ if __name__ == "__main__":
         largestvariants=sorted(results, key=lambda x: x[2], reverse=True)
         print(f"The anagram with the largest number of variants is {longestpair[0]} and results are {longestpair[1]}")
         print(f"The longest pair of words that are anagrams of each other is {largestvariants[0][2]} and results are {largestvariants[0][1]}")
-        new_word=input('Are you sure want to continue y/n?:')
+        new_word=input('Are you sure want to continue y/n?: ')
         if new_word=='y':
             s=True
         else:
-            print('Exit from Anagram')
+            print('Exiting from Anagram !!')
             s=False
