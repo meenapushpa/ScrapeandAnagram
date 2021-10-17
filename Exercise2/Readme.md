@@ -21,6 +21,16 @@ Factors to consider for demonstration:
 * ***Efficient*** code with minimal space and time complexities that are suitable for pay-as-you-go IaaS
 environments.
 
+**Start Scrapy Project Example**
+
+         https://docs.scrapy.org/en/latest/intro/tutorial.html
+
+**Install Requirements**
+
+         pip install -r requirements.txt
+          
 **How to run:**
        
-       scrapy crawl books -t csv -o outputfile.csv
+        scrapy crawl books -t csv -o outputfile.csv
+       
+
