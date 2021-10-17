@@ -8,7 +8,7 @@
     Construct a function written in Python that, given a list of words, returns a dictionary whose keys are the letters
     of a word sorted into alphabetical order and whose values are lists of all the words with that key.
     
-    **Example**
+    Example:
           
           A key-value pair might be:
           ‘aestt’: [‘state’, ‘taste’]
