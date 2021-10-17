@@ -4,6 +4,7 @@ Develop a scraping application that collects product information from http://boo
 catalogue of items listed at the time of the scrape.
 
 **Storage**
+
 Store scraped data as tabular data in a simple file format of your choosing to act as an OLTP system.
 You may implement this task in any language or framework. Ensure requirements and dependencies are
 appropriately specified for the solution.
